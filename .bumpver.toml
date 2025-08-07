@@ -3,7 +3,7 @@ current_version = "0.1.2"
 version_pattern = "MAJOR.MINOR.PATCH" 
 commit_message = "bump version {old_version} -> {new_version}" 
 tag_message = "" 
-search = [ 
-  "pyproject.toml", 
-  "davybot/__version__.py" 
-] 
+
+[version_files]
+"pyproject.toml" = ["version"]
+"davybot/__version__.py" = ["__version__"]
