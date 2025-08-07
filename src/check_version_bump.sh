@@ -7,7 +7,7 @@ VERSION_FILE="src/__version__.py"
 CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 
 get_version() {
-    grep -E "^__version__\s*=" "$1" | sed -E 's/__version__\s*=\s*["\047]([^"\047]+)["\047].*/\1/'
+    grep -E '^__version__\s*=' "$1" | sed -E 's/__version__\s*=\s*["'\''"]([^"'\''"]+)["'\''"].*/\1/'
 }
 
 git fetch origin main 
