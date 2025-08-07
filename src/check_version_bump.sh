@@ -2,7 +2,7 @@
 
 set -euo pipefail 
 
-VERSION_FILE="src/__version__.py" 
+VERSION_FILE="src/__init__.py" 
 
 CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 

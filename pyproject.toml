@@ -1,6 +1,6 @@
 [project]
 name = "test-bump-version"
-version = "0.1.0"
+version = "0.1.1"
 description = ""
 authors = [
     {name = "a"}
@@ -27,7 +27,3 @@ post_commit_hook = ""
 commit = true
 tag = true
 push = true
-
-[version_files]
-"pyproject.toml" = ["project", "version"]
-"src/__version__.py" = ["__version__"]

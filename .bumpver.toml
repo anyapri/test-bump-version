@@ -1,0 +1,13 @@
+[bumpver] 
+current_version = "0.1.1" 
+version_pattern = "MAJOR.MINOR.PATCH" 
+commit_message = "bump version {old_version} -> {new_version}" 
+tag_message = "" 
+
+[bumpver.file_patterns]
+"pyproject.toml" = [
+    'version = "{version}"',
+]
+"src/__init__.py" = [
+    '__version__ = "{version}"',
+]
