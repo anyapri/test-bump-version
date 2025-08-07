@@ -1,0 +1,29 @@
+[project]
+name = "test-bump-version"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "a"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "bumpver (>=2025.1131,<2026.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.bumpver]
+current_version = "2025.1001-alpha"
+version_pattern = "YYYY.BUILD[-TAG]"
+commit_message = "bump version {old_version} -> {new_version}"
+tag_message = "{new_version}"
+tag_scope = "default"
+pre_commit_hook = ""
+post_commit_hook = ""
+commit = true
+tag = true
+push = true
