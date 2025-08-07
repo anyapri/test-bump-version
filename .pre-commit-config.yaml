@@ -1,0 +1,28 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: check-merge-conflict
+      - id: end-of-file-fixer
+  - repo: https://github.com/charliermarsh/ruff-pre-commit
+    rev: "v0.6.9"
+    hooks:
+      - id: ruff
+        args: ["check", "--select", "I", "--fix", --exit-non-zero-on-fix]
+  - repo: https://github.com/psf/black
+    rev: 23.9.1
+    hooks:
+      - id: black
+        args: [--line-length=120]
+  - repo: https://github.com/RobertCraigie/pyright-python
+    rev: v1.1.400
+    hooks:
+      - id: pyright
+        args: ["-p", "."]
+  - repo: local
+    hooks:
+      - id: check-version-bump
+        name: Check version bump
+        entry: bash src/check_version_bump.sh
+        language: system
+        stages: [pre-push]
